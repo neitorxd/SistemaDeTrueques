@@ -10,6 +10,7 @@ import { HeaderComponent } from './Paginas/header/header.component';
 import { FooterComponent } from './Paginas/footer/footer.component';
 import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.component';
 import { RegistroUsuariosAdminComponent } from './Paginas/registro-usuarios-admin/registro-usuarios-admin.component';
+import { LandingPageComponent } from './Paginas/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegistroUsuariosAdminComponent } from './Paginas/registro-usuarios-admi
     HeaderComponent,
     FooterComponent,
     PerfilUsuarioComponent,
-    RegistroUsuariosAdminComponent
+    RegistroUsuariosAdminComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

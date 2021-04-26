@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    $("#login-button").click(function(event){
+      event.preventDefault();
+    
+    $('form').fadeOut(500);
+    $('.wrapper').addClass('form-success');
+ });
+  }
 
   ngOnInit(): void {
   }
