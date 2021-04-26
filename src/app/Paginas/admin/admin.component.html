@@ -1,4 +1,56 @@
 <app-header></app-header>
-<div class="container" style="border: 1px black solid;">
-    <h1>ESTA ES LA VENTANA DE ADMIN</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <h2 style="text-align: center;">Administrador</h2>
+        </div>
+    </div>
+      <div class="dropdown">
+        <button  style="float:right;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+        </ul>
+      </div>
+    <br>
+    <br>
+    <div id=contenedor class="container border border-dark ">
+        <h2>Lista de usuarios</h2>
+        <br>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col"></th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td >Larry the Bird</td>
+                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
 </div>

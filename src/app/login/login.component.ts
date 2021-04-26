@@ -22,6 +22,10 @@ export class LoginComponent implements OnInit {
   {
     this.router.navigate(['landingpage']);
   }
+  crearcuenta()
+  {
+    this.router.navigate(['registrousuariosadmin'])
+  }
 
   ngOnInit(): void {
   }
