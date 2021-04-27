@@ -3,6 +3,12 @@
     width: 80px;
     height: 80px;
 }
-.carousel-inner img {
+.carousel-inner img
+{
     margin: auto;
-  }
+}
+
+.col-4
+{
+    color: black;
+}

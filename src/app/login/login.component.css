@@ -26,6 +26,7 @@
     font-family: "Source Sans Pro", sans-serif;
     color: white;
     font-weight: 300;
+    background: -webkit-linear-gradient(180deg, rgba(153,0,204,1) 0%, rgba(0,255,204,1) 100%);
   }
   body :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
@@ -46,6 +47,7 @@
     font-family: "Source Sans Pro", sans-serif;
     color: white;
     font-weight: 300;
+
   }
   .wrapper {
     position: absolute;
