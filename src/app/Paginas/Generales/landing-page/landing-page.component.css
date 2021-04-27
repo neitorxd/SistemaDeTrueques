@@ -12,3 +12,9 @@
 {
     color: black;
 }
+.col-4 img
+{
+    max-width: 100%;
+    height: auto;
+    border: 3px solid black;
+}
