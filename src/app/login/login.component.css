@@ -104,7 +104,7 @@
   form input:focus {
     background-color: white;
     width: 300px;
-    color: #53e3a6;
+    color: black;
   }
   form button {
     -webkit-appearance: none;
@@ -114,11 +114,12 @@
     background-color: white;
     border: 0;
     padding: 10px 15px;
-    color: #53e3a6;
+    color: black;
     border-radius: 3px;
     width: 250px;
     cursor: pointer;
     font-size: 18px;
+    font-weight: bold;
     transition-duration: 0.25s;
   }
   form button:hover {
