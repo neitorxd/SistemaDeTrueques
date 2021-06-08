@@ -17,6 +17,10 @@ export class UsuariosService {
   {
     return this.http.get<Usuario>("http://localhost:3000/usuarios/" + id);
   }
+  obtenerUsuarioPorNombre(user:string)
+  {
+    return this.http.get<Usuario>("http://localhost:3000/usuarios/"+ user);
+  }
   eliminarUsuario(id:number)
   {
     return this.http.delete("http://localhost:3000/usuarios/" + id);
