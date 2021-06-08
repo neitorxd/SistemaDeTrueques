@@ -1,0 +1,81 @@
+{
+  "Usuarios": [
+    {
+      "id": 1,
+      "nombre": "hola",
+      "apellido": "hola",
+      "ciudad": "hola",
+      "pais": "hola",
+      "usuario": "hola",
+      "contraseña": "hola"
+    },
+    {
+      "id": 2,
+      "nombre": "hola",
+      "apellido": "hola",
+      "ciudad": "hola",
+      "pais": "hola",
+      "usuario": "hola",
+      "contraseña": "hola"
+    },
+    {
+      "nombre": "cccccccccc",
+      "apellido": "cccccccccc",
+      "pais": "cccccccccc",
+      "ciudad": "cccccccccc",
+      "usuario": "cccccccccc",
+      "contrasena": "cccccccccc",
+      "id": 4
+    },
+    {
+      "nombre": "ddddddddddd",
+      "apellido": "ddddddddddd",
+      "pais": "ddddddddddd",
+      "ciudad": "ddddddddddd",
+      "usuario": "ddddddddddd",
+      "contrasena": "ddddddddddd",
+      "id": 5
+    },
+    {
+      "nombre": "wgeargeg",
+      "apellido": "ergerger",
+      "pais": "rgergerg",
+      "ciudad": "ergergre",
+      "usuario": "regergerg",
+      "contrasena": "ergerg",
+      "id": 6
+    }
+  ],
+  "Productos": [
+    {
+      "id": 1,
+      "nombre": "hola",
+      "precio": 1000,
+      "descripcion": "hola"
+    },
+    {
+      "id": 2,
+      "nombre": "hola",
+      "precio": 1000,
+      "descripcion": "hola"
+    },
+    {
+      "nombre": "",
+      "precio": 0,
+      "descripcion": "",
+      "id": 3
+    },
+    {
+      "nombre": "",
+      "precio": 0,
+      "descripcion": "",
+      "id": 4
+    },
+    {
+      "nombre": "awdawd",
+      "precio": 19999,
+      "descripcion": "awa",
+      "id": 5
+    }
+  ]
+}

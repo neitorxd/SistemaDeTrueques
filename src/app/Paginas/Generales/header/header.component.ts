@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,14 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {
+  }
+
+  volver()
+  {
+    this.router.navigate(['landingpage']);
   }
 
 }

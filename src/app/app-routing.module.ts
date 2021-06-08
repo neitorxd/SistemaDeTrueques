@@ -10,6 +10,8 @@ import { PerfilUsuarioComponent } from './Paginas/Ventanas-Usuario/perfil-usuari
 import { RegistroUsuariosAdminComponent } from './Paginas/Ventanas-Admin/registro-usuarios-admin/registro-usuarios-admin.component';
 import { LandingPageComponent } from './Paginas/Generales/landing-page/landing-page.component';
 import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos/ventana-productos.component';
+import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearproducto.component';
+
 
 const routes: Routes = [
   {path: '',component: LoginComponent},
@@ -21,7 +23,8 @@ const routes: Routes = [
   {path: 'perfilusuario',component:PerfilUsuarioComponent},
   {path: 'registrousuariosadmin',component: RegistroUsuariosAdminComponent},
   {path: 'landingpage',component: LandingPageComponent},
-  {path: 'ventanaproductos' ,component: VentanaProductosComponent}
+  {path: 'ventanaproductos' ,component: VentanaProductosComponent},
+  {path: 'crearproducto', component:CrearproductoComponent }
 
 ];
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/modulos/usuario';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-registro-usuarios-admin',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroUsuariosAdminComponent implements OnInit {
 
-  constructor() { }
+  nombre:string="";
+  apellido:string="";
+  pais:string="";
+  ciudad:string="";
+  usuario:string="";
+  contrasena:string="";
+
+  constructor(private servicio:UsuariosService) { }
 
   ngOnInit(): void {
   }
+
+  ingresarUsuario()
+  {
+    let usuarioactual:Usuario = {
+      nombre:this.nombre,
+      apellido:this.apellido,
+      pais:this.pais,
+      ciudad:this.ciudad,
+      usuario:this.usuario,
+      contrasena:this.contrasena
+    }
+    this.servicio.crearUsuario(usuarioactual).subscribe();
+  }
+
 
 }

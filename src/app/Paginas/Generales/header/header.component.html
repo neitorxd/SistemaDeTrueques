@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <img id="Logo" src="../../../../assets/Imagenes/LogoPNG.png" alt="Not Visible">
+      <img id="Logo" src="../../../../assets/Imagenes/LogoPNG.png" alt="Not Visible"  (click)="volver()">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,6 +27,7 @@
           <input class="form-control me-2" type="search" placeholder="Que Desea Buscar?" aria-label="Buscar">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
+        <button class="btn btn-danger" routerLink="/login">SALIR</button>
       </div>
     </div>
   </nav>

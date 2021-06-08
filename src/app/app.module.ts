@@ -12,6 +12,9 @@ import { PerfilUsuarioComponent } from './Paginas/Ventanas-Usuario/perfil-usuari
 import { RegistroUsuariosAdminComponent } from './Paginas/Ventanas-Admin/registro-usuarios-admin/registro-usuarios-admin.component';
 import { LandingPageComponent } from './Paginas/Generales/landing-page/landing-page.component';
 import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos/ventana-productos.component';
+import { FormsModule } from '@angular/forms';
+import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearproducto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos
     PerfilUsuarioComponent,
     RegistroUsuariosAdminComponent,
     LandingPageComponent,
-    VentanaProductosComponent
+    VentanaProductosComponent,
+    CrearproductoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

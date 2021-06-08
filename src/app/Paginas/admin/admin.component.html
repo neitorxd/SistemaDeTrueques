@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="container">
+<div class="container" style="font-weight: bold;font-size: large;">
     <div class="row">
         <div class="col">
         <h2 style="text-align: center;">Administrador</h2>
@@ -16,42 +16,37 @@
       </div>
     <br>
     <br>
-    <div id=contenedor class="container border border-dark ">
+    <div class="container" style="background-color: rgba(255, 255, 255,0.5); border: solid 5px black;">
         <h2>Lista de usuarios</h2>
         <br>
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
                         <th scope="col">Usuario</th>
-                        <th scope="col"></th>
-                       
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngFor="let usuario of usuarios">
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
-                      
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td >Larry the Bird</td>
-                        <td><button type="button" class="btn btn-danger">Bloquear</button></td>
-                        
+                        <th scope="row">{{usuario.id}}</th>
+                        <th scope="row">{{usuario.nombre}}</th> 
+                        <th scope="row">{{usuario.apellido}}</th>
+                        <th scope="row">{{usuario.usuario}}</th>
                       </tr>
                     </tbody>
-                  </table>
+                </table>
+            </div>
+            <div class="col-4">
+              <div class="container">
+                <input type="text" [(ngModel)] ="ideliminar" class="form-control" placeholder="Ingrese ID" style="margin-bottom: 1%;">
+                <button class="btn btn-danger" style="border: solid 3px black; width: 100%;" (click)="eliminar()">Borrar Usuario</button>
+              </div>
             </div>
         </div>
+      </div>
 </div>
 <app-footer></app-footer>
