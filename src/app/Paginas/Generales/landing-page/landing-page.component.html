@@ -15,15 +15,19 @@
               </div>
             </div>
             <div class="carousel-item" *ngFor="let producto of productos">
-              <div class="card mb-3" style="max-width: 100%;margin-left: 12%;margin-right: 12%;">
+              <div class="card mb-3" style="margin-left: 10%;margin-right: 10%;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src={{producto.imagenes}} alt="..." style="width: 100%;">
+                    <img src={{producto.imagenes}} alt="..." style="width:100%;margin: auto;">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-6">
                     <div class="card-body" style="font-weight: bold;">
-                      <h1 class="card-title" style="font-size: 50px;">{{producto.nombre}}</h1>
+                      <h1 class="card-title" style="font-size: 40px;">{{producto.nombre}}</h1>
                       <p class="card-text" style="font-size: 20px;">{{producto.descripcion}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-2" style="margin: auto;">
+                    <div class="container">
                       <p class="card-text">$ {{producto.precio}}</p>
                     </div>
                   </div>

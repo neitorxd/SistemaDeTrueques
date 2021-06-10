@@ -4,6 +4,7 @@ import { Usuario } from "./usuario";
 
 export interface Intercambio {
     id?:number,
+    usuarioid:number,
     productos:Producto[],
     usuarios:Usuario[],
     aceptado:boolean
