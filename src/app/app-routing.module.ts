@@ -20,11 +20,11 @@ const routes: Routes = [
   {path: 'admin',component: AdminComponent},
   {path: 'header',component: HeaderComponent},
   {path: 'footer',component: FooterComponent},
-  {path: 'perfilusuario',component:PerfilUsuarioComponent},
+  {path: 'perfilusuario/:idusuario',component:PerfilUsuarioComponent},
   {path: 'registrousuariosadmin',component: RegistroUsuariosAdminComponent},
-  {path: 'landingpage',component: LandingPageComponent},
-  {path: 'ventanaproductos' ,component: VentanaProductosComponent},
-  {path: 'crearproducto', component:CrearproductoComponent }
+  {path: 'landingpage/:idusuario',component: LandingPageComponent},
+  {path: 'ventanaproductos/:idusuario' ,component: VentanaProductosComponent},
+  {path: 'crearproducto/:idusuario', component:CrearproductoComponent }
 
 ];
 

@@ -10,7 +10,7 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
 export class AdminComponent implements OnInit {
 
   usuarios:Usuario[] =[];
-  usuariobloqueado:Usuario ={"nombre":"","apellido":"","ciudad":"","pais":"","usuario":"","contrasena":""}
+  usuariobloqueado:Usuario ={"nombre":"","apellido":"","ciudad":"","pais":"","usuario":"","contrasena":"","esadmin":false}
   ideliminar:number=0;
 
   constructor(private service:UsuariosService) { }

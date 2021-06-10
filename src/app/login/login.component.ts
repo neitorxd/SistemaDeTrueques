@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
     $('.wrapper').addClass('form-success');
  });
   }
-  /* NO OLVIDAR QUE ESTO ES PARA CAMBIAR DE VENTANA*/
-
+  
   llenarUsuarios()
   {
     this.servicios.obtenerUsuarios().subscribe(lista=>{
@@ -35,36 +34,39 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  /** PARA ESTE METODO HAY QUE AGREGAR EL /:id AL app.routingmodule.ts y cambiar el metodo del boton a buscar() en ves de rootear()*/
-  /** PARA ESTE METODO HAY QUE AGREGAR EL /:id AL app.routingmodule.ts y cambiar el metodo del boton a buscar() en ves de rootear()*/
-  /** PARA ESTE METODO HAY QUE AGREGAR EL /:id AL app.routingmodule.ts y cambiar el metodo del boton a buscar() en ves de rootear()*/
-  /** PARA ESTE METODO HAY QUE AGREGAR EL /:id AL app.routingmodule.ts y cambiar el metodo del boton a buscar() en ves de rootear()*/
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
-  /** ││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││││ */
   buscar()
   {
-    const usuarioSeleccionado = this.listausuarios.find(x => x.usuario === this.user);
-    this.idSeleccionada= usuarioSeleccionado?.id;
-
-    console.log(usuarioSeleccionado?.contrasena);
-
-    if(usuarioSeleccionado?.contrasena === this.password)
+    if(this.listausuarios.find(x => x.usuario === this.user) === undefined)
     {
-      this.router.navigate(['landingpage/'+ this.idSeleccionada]);
+      alert("Usuario No Registrado");
     }
     else
     {
-      alert("Contraseña Incorrecta");
+      const usuarioSeleccionado = this.listausuarios.find(x => x.usuario === this.user);
+      this.idSeleccionada= usuarioSeleccionado?.id;
+      if(usuarioSeleccionado?.usuario === this.user)
+      {
+        if(usuarioSeleccionado.contrasena === this.password)
+        {
+          if(usuarioSeleccionado.esadmin === true)
+          {
+            this.router.navigate(['admin']);
+          }
+          else
+          {
+            this.router.navigate(['landingpage/'+ this.idSeleccionada]);
+          }
+        }
+        else
+        {
+          alert("Contraseña Incorrecta");
+        }
+      }
+      else
+      {
+        alert("Usuario No Registrado");
+      }
     }
-
-  }
-  rootear()
-  {
-    this.router.navigate(['landingpage'])
   }
   crearcuenta()
   {

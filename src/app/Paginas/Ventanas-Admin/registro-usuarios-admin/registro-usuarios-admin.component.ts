@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/modulos/usuario';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
@@ -15,8 +16,9 @@ export class RegistroUsuariosAdminComponent implements OnInit {
   ciudad:string="";
   usuario:string="";
   contrasena:string="";
+  esadmin:boolean=false;
 
-  constructor(private servicio:UsuariosService) { }
+  constructor(private servicio:UsuariosService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -29,9 +31,13 @@ export class RegistroUsuariosAdminComponent implements OnInit {
       pais:this.pais,
       ciudad:this.ciudad,
       usuario:this.usuario,
-      contrasena:this.contrasena
+      contrasena:this.contrasena,
+      esadmin:this.esadmin
     }
     this.servicio.crearUsuario(usuarioactual).subscribe();
+    alert("Usuario Creado");
+    this.router.navigate(["login"]);
+
   }
 
 

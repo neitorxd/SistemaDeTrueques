@@ -1,3 +1,5 @@
+import { Intercambio } from "./intercambio";
+
 export interface Usuario {
 
     id?:number;
@@ -7,5 +9,6 @@ export interface Usuario {
     ciudad:string;
     usuario:string;
     contrasena:string;
-
+    intercambios?:Intercambio[];
+    esadmin?:boolean;
 }

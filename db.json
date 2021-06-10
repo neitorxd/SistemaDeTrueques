@@ -1,49 +1,14 @@
 {
   "Usuarios": [
     {
-      "id": 1,
-      "nombre": "hola",
-      "apellido": "hola",
-      "ciudad": "hola",
-      "pais": "hola",
-      "usuario": "hola",
-      "contraseña": "hola"
-    },
-    {
-      "id": 2,
-      "nombre": "hola",
-      "apellido": "hola",
-      "ciudad": "hola",
-      "pais": "hola",
-      "usuario": "hola",
-      "contraseña": "hola"
-    },
-    {
-      "nombre": "cccccccccc",
-      "apellido": "cccccccccc",
-      "pais": "cccccccccc",
-      "ciudad": "cccccccccc",
-      "usuario": "cccccccccc",
-      "contrasena": "cccccccccc",
-      "id": 4
-    },
-    {
-      "nombre": "ddddddddddd",
-      "apellido": "ddddddddddd",
-      "pais": "ddddddddddd",
-      "ciudad": "ddddddddddd",
-      "usuario": "ddddddddddd",
-      "contrasena": "ddddddddddd",
-      "id": 5
-    },
-    {
       "nombre": "wgeargeg",
       "apellido": "ergerger",
       "pais": "rgergerg",
       "ciudad": "ergergre",
       "usuario": "regergerg",
       "contrasena": "ergerg",
-      "id": 6
+      "id": 6,
+      "esadmin":false
     },
     {
       "nombre": "wdoijawdoi",
@@ -52,39 +17,116 @@
       "ciudad": "aoiwjdoawi",
       "usuario": "diego",
       "contrasena": "diego",
-      "id": 7
+      "id": 7,
+      "esadmin":true
+    },
+    {
+      "nombre": "Diego",
+      "apellido": "Molina",
+      "pais": "Chile",
+      "ciudad": "Antofagasta",
+      "usuario": "samitamolina",
+      "contrasena": "neitor123",
+      "id": 8,
+      "esadmin":false
+    },
+    {
+      "nombre": "awa",
+      "apellido": "uwu",
+      "pais": "awita",
+      "ciudad": "owowowowowo",
+      "usuario": "owowowo",
+      "contrasena": "owowowo",
+      "id": 9,
+      "esadmin":false
+    },
+    {
+      "nombre": "xd",
+      "apellido": "xd",
+      "pais": "xd",
+      "ciudad": "xd",
+      "usuario": "xd",
+      "contrasena": "xd",
+      "id": 10,
+      "esadmin":false
+    },
+    {
+      "nombre": "agfdgsdf",
+      "apellido": "gsdgsdg",
+      "pais": "dfgsdgdf",
+      "ciudad": "dsfgsdfg",
+      "usuario": "dsgdsg",
+      "contrasena": "dsfgsdg",
+      "id": 11,
+      "esadmin":false
     }
   ],
   "Productos": [
     {
       "id": 1,
-      "nombre": "hola",
+      "nombre": "Pummel Party",
       "precio": 1000,
-      "descripcion": "hola"
+      "descripcion": "Entretenido juego estilo mario party",
+      "imagenes": [
+        "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
+      ]
     },
     {
       "id": 2,
-      "nombre": "hola",
-      "precio": 1000,
-      "descripcion": "hola"
+      "nombre": "Counter Strike Teletubies",
+      "precio": 10000,
+      "descripcion": "Models para players de counter strike 1.6",
+      "imagenes": [
+        "https://gamebanana.com/mods/embeddables/223232?variant=sd_image"
+      ]
     },
     {
-      "nombre": "",
-      "precio": 0,
-      "descripcion": "",
-      "id": 3
+      "nombre": "Valorant",
+      "precio": 20000,
+      "descripcion": "Juego shooter para jugar con tus amigos",
+      "id": 3,
+      "imagenes": [
+        "https://playvalorant.com/assets/video/game-overview-poster-launch.jpg"
+      ]
     },
     {
-      "nombre": "",
-      "precio": 0,
-      "descripcion": "",
-      "id": 4
+      "nombre": "Runescape",
+      "precio": 5000,
+      "descripcion": "MMORPG de la edad mediaval en el cual te puedes aventurar",
+      "id": 4,
+      "imagenes": [
+        "https://as.com/meristation/imagenes/2019/09/19/noticias/1568891881_964298_1568891998_sumario_normal.jpg"
+      ]
     },
     {
       "nombre": "awdawd",
       "precio": 19999,
       "descripcion": "awa",
-      "id": 5
+      "id": 5,
+      "imagenes": [
+        "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png"
+      ]
+    },
+    {
+      "nombre": "awda",
+      "precio": 1231,
+      "descripcion": "adawdawd",
+      "imagenes": [
+        "https://images-na.ssl-images-amazon.com/images/I/51GV6PG0J3L._SX342_.jpg"
+      ],
+      "id": 6
+    },
+    {
+      "nombre": "aaaaaaaaa",
+      "precio": 6969,
+      "descripcion": "awadeuwu",
+      "imagenes": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJP53GuvlQbmPvgLRMfyLOcbyqy4xN36yWI0AFFNIYeEUsbWzd2kyENNIa-XDTn3E2lgU&usqp=CAU"
+      ],
+      "id": 7
     }
+  ],
+  "Intercambios": [
+    {}
   ]
 }
