@@ -82,15 +82,6 @@
       "esadmin": false,
       "productos": [
         {
-          "id": 1,
-          "nombre": "Pummel Party v2",
-          "precio": 1500,
-          "descripcion": "Entretenido juego estilo mario party",
-          "imagenes": [
-            "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
-          ]
-        },
-        {
           "id": 2,
           "nombre": "Counter Strike Teletubies",
           "precio": 10000,

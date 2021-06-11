@@ -22,6 +22,7 @@ export class UsuarioComponent implements OnInit {
   usuarios:Usuario[]=[];
   linkImagen:string="";
   imagenes:string[]=[]
+  ideliminar:number|undefined=0;
   
 
   constructor(private router:Router, private route:ActivatedRoute, private servicioprod:ProductosService, private serviciousuario:UsuariosService ) { }
@@ -31,13 +32,27 @@ export class UsuarioComponent implements OnInit {
     this.llenarProductos();
   }
 
-  eliminar()
+  eliminar(id:number|undefined)
   {
+    this.ideliminar = id;
     let usuarioproducto:Usuario;
     this.serviciousuario.obtenerUsuarioPorId(Number(this.idusuario)).subscribe(objeto=>{
       usuarioproducto=objeto;
+      let listatemp = [];
+      for (let index = 0; index < usuarioproducto.productos.length; index++) {
+        let element = usuarioproducto.productos[index];
+        if (element.id != this.ideliminar) {
+          listatemp.push(element);
+        }
+        else
+        {
+          console.log(element);
+        }
+      }
+      usuarioproducto.productos = listatemp;
+      this.serviciousuario.editarUsuario(usuarioproducto).subscribe();
     });
-    
+    window.location.reload();
   }
 
   llenarProductos()
@@ -47,7 +62,6 @@ export class UsuarioComponent implements OnInit {
     this.serviciousuario.obtenerUsuarioPorId(id).subscribe(obtenido=>{
       usuario = obtenido;
       this.productos= usuario.productos;
-      console.log(usuario);
     });
     this.serviciousuario.obtenerUsuarios().subscribe(obtenidos=>{
       this.usuarios = obtenidos;
@@ -66,7 +80,6 @@ export class UsuarioComponent implements OnInit {
       let element = this.usuarios[index];
       if(element.id===Number(this.idusuario))
       {
-        console.log(element);
         for (let index2 = 0; index2 < element.productos.length; index2++) {
           let element2 = element.productos[index2];
           if (element2.id === this.ideditar) {
@@ -75,7 +88,6 @@ export class UsuarioComponent implements OnInit {
             element2.descripcion=this.descripcionproducto;
             element2.imagenes=arreglo;
             this.serviciousuario.editarUsuario(element).subscribe();
-            console.log(element);
             break;
           }
         }
