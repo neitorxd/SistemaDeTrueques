@@ -16,8 +16,7 @@ export class CrearproductoComponent implements OnInit {
   imagenes:string[] =[];
   linkImagen:string="";
   idusuario:string|null=null;
-
-
+  
   constructor(private servicio:ProductosService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,44 +29,29 @@ export class CrearproductoComponent implements OnInit {
   {
     if(this.linkImagen==="" || this.linkImagen.includes('http')=== false)
     {
-      alert("No hay imagenes");
+      alert("No hay imagenes o no son validas\nfavor agregar comas de ser mas de una");
       this.imagenes=[];
     }
     else
     {
       this.imagenes = [];
-      let spliteo = this.linkImagen.split(",");
-      this.imagenes = spliteo;
-    }
-  }
-
-  /** EL METODO DE ABAJO ERA PARA MOSTRAR IMAGENS DE UN USUARIO DESDE SU EQUIPO PERO NO FUNCIONO */
-
-  seleccion(event:any) {
-    this.urls = [];
-    let files = event.target.files;
-    if (files) {
-      for (let file of files) {
-        let reader = new FileReader();
-        reader.onload = (e: any) => {
-          this.urls.push(e.target.result);
-        }
-        this.imagenes.push(file);
-        reader.readAsDataURL(file);
+      if(this.linkImagen.includes(',')===false)
+      {
+        this.imagenes.push(this.linkImagen);
+      }
+      else
+      {
+        let spliteo = this.linkImagen.split(",");
+        this.imagenes = spliteo;
       }
     }
-    console.log(this.imagenes);
   }
-
-  /** GUARDAR IMAGENES EN ARREGLO */
 
   guardar()
   {
-    if(this.imagenes===[]){
+    if(this.imagenes.length===0){
 
-      alert("No hay Imagenes Ingresadas");
-      window.location.reload();
-
+      alert("No hay Imagenes Ingresadas \nsi ingreso alguna porfavor \npresione agregar imagenes");
     }
     else
     {
@@ -82,13 +66,5 @@ export class CrearproductoComponent implements OnInit {
       alert("El producto "+productoagregado.nombre +"a sido Agregado con un costo de $"+productoagregado.precio)
       window.location.reload();
     }
-    
-    
   }
-
-  agregar()
-  {
-    
-  }
-  
 }

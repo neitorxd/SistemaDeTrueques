@@ -10,8 +10,7 @@
             Admin
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Perfil</a></li>
-          <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+          <li><a class="dropdown-item" routerLink="/login">Cerrar Sesion</a></li>
         </ul>
       </div>
     <br>
@@ -28,6 +27,7 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Usuario</th>
+                        <th scope="col">Editar</th>
                       </tr>
                     </thead>
                     <tbody *ngFor="let usuario of usuarios">
@@ -36,6 +36,7 @@
                         <th scope="row">{{usuario.nombre}}</th> 
                         <th scope="row">{{usuario.apellido}}</th>
                         <th scope="row">{{usuario.usuario}}</th>
+                        <th scope="row"><button class="btn btn-primary" style="border:solid 3px black" (click)="obtener(usuario.id)">Editar Usuario</button></th>
                       </tr>
                     </tbody>
                 </table>
@@ -45,6 +46,16 @@
                 <h2>Borrar por ID</h2>
                 <input type="text" [(ngModel)] ="ideliminar" class="form-control" placeholder="Ingrese ID" style="margin-bottom: 1%;">
                 <button class="btn btn-danger" style="border: solid 3px black; width: 100%;" (click)="eliminar()">Borrar Usuario</button>
+              </div>
+              <div class="container" *ngIf="mostrarEditor">
+                <div class="container" style="margin-bottom: 3%;">
+                  <h1>Editar Usuario</h1>
+                  <input type="text" class="form-control" placeholder="Nombre" style="margin-bottom: 1%;" [(ngModel)]="nombreeditado">
+                  <input type="text" class="form-control" placeholder="Apellido" style="margin-bottom: 1%;"[(ngModel)]="apellidoeditado">
+                  <input type="text" class="form-control" placeholder="Ciudad" style="margin-bottom: 1%;"[(ngModel)]="ciudadeditada">
+                  <input type="text" class="form-control" placeholder="Pais" style="margin-bottom: 1%;"[(ngModel)]="paiseditado">
+                  <button class="btn btn-danger" style="border: solid 3px black; width: 100%;" (click)="editar()">Guardar Cambios</button>
+                </div>
               </div>
             </div>
         </div>

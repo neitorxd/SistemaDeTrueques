@@ -21,12 +21,10 @@ export class IntercambiosService {
   {
     return this.http.delete("http://localhost:3000/usuarios/" + id);
   }
-
   crearIntercambio(intercambio:Intercambio)
   {
     return this.http.post<Intercambio>("http://localhost:3000/usuarios/",intercambio);
   }
-
   editarIntercambio(intercambio:Intercambio)
   {
     return this.http.put("http://localhost:3000/usuarios/" +intercambio.id, intercambio);

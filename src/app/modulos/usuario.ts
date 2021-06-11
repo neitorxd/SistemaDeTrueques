@@ -7,8 +7,8 @@ export interface Usuario {
     apellido:string;
     pais:string;
     ciudad:string;
-    usuario:string;
-    contrasena:string;
+    usuario?:string;
+    contrasena?:string;
     intercambios?:Intercambio[];
     esadmin?:boolean;
 }
