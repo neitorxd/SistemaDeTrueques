@@ -1,4 +1,5 @@
 import { Intercambio } from "./intercambio";
+import { Producto } from "./producto";
 
 export interface Usuario {
 
@@ -11,4 +12,5 @@ export interface Usuario {
     contrasena?:string;
     intercambios?:Intercambio[];
     esadmin?:boolean;
+    productos:Producto[];
 }

@@ -8,7 +8,8 @@
       "usuario": "diego",
       "contrasena": "diego",
       "id": 7,
-      "esadmin": true
+      "esadmin": true,
+      "productos": []
     },
     {
       "nombre": "Diego",
@@ -18,7 +19,27 @@
       "usuario": "samitamolina",
       "contrasena": "neitor123",
       "id": 8,
-      "esadmin": false
+      "esadmin": false,
+      "productos": [
+        {
+          "nombre": "awdawd",
+          "precio": 19999,
+          "descripcion": "awa",
+          "id": 5,
+          "imagenes": [
+            "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png"
+          ]
+        },
+        {
+          "nombre": "awda",
+          "precio": 1231,
+          "descripcion": "adawdawd",
+          "imagenes": [
+            "https://images-na.ssl-images-amazon.com/images/I/51GV6PG0J3L._SX342_.jpg"
+          ],
+          "id": 6
+        }
+      ]
     },
     {
       "nombre": "juan",
@@ -28,7 +49,27 @@
       "usuario": "owowowo",
       "contrasena": "owowowo",
       "id": 9,
-      "esadmin": false
+      "esadmin": false,
+      "productos": [
+        {
+          "id": 1,
+          "nombre": "Pummel Party",
+          "precio": 1000,
+          "descripcion": "Entretenido juego estilo mario party",
+          "imagenes": [
+            "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Counter Strike Teletubies",
+          "precio": 10000,
+          "descripcion": "Models para players de counter strike 1.6",
+          "imagenes": [
+            "https://gamebanana.com/mods/embeddables/223232?variant=sd_image"
+          ]
+        }
+      ]
     },
     {
       "nombre": "diego",
@@ -38,7 +79,36 @@
       "usuario": "xd",
       "contrasena": "xd",
       "id": 10,
-      "esadmin": false
+      "esadmin": false,
+      "productos": [
+        {
+          "id": 1,
+          "nombre": "Pummel Party v2",
+          "precio": 1500,
+          "descripcion": "Entretenido juego estilo mario party",
+          "imagenes": [
+            "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Counter Strike Teletubies",
+          "precio": 10000,
+          "descripcion": "Models para players de counter strike 1.6",
+          "imagenes": [
+            "https://gamebanana.com/mods/embeddables/223232?variant=sd_image"
+          ]
+        },
+        {
+          "nombre": "Valorant v2",
+          "precio": 15000,
+          "descripcion": "Juego shooter para jugar con tus amigos",
+          "id": 3,
+          "imagenes": [
+            "https://playvalorant.com/assets/video/game-overview-poster-launch.jpg"
+          ]
+        }
+      ]
     },
     {
       "nombre": "matias",
@@ -48,92 +118,30 @@
       "usuario": "dsgdsg",
       "contrasena": "dsfgsdg",
       "id": 11,
-      "esadmin": false
+      "esadmin": false,
+      "productos": [
+        {
+          "id": 1,
+          "nombre": "Pummel Party",
+          "precio": 1000,
+          "descripcion": "Entretenido juego estilo mario party",
+          "imagenes": [
+            "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "Counter Strike Teletubies",
+          "precio": 10000,
+          "descripcion": "Models para players de counter strike 1.6",
+          "imagenes": [
+            "https://gamebanana.com/mods/embeddables/223232?variant=sd_image"
+          ]
+        }
+      ]
     }
   ],
-  "Productos": [
-    {
-      "id": 1,
-      "nombre": "Pummel Party",
-      "precio": 1000,
-      "descripcion": "Entretenido juego estilo mario party",
-      "imagenes": [
-        "https://static-cdn.jtvnw.net/ttv-boxart/Pummel%20Party.jpg"
-      ]
-    },
-    {
-      "id": 2,
-      "nombre": "Counter Strike Teletubies",
-      "precio": 10000,
-      "descripcion": "Models para players de counter strike 1.6",
-      "imagenes": [
-        "https://gamebanana.com/mods/embeddables/223232?variant=sd_image"
-      ]
-    },
-    {
-      "nombre": "Valorant",
-      "precio": 20000,
-      "descripcion": "Juego shooter para jugar con tus amigos",
-      "id": 3,
-      "imagenes": [
-        "https://playvalorant.com/assets/video/game-overview-poster-launch.jpg"
-      ]
-    },
-    {
-      "nombre": "Runescape",
-      "precio": 5000,
-      "descripcion": "MMORPG de la edad mediaval en el cual te puedes aventurar",
-      "id": 4,
-      "imagenes": [
-        "https://as.com/meristation/imagenes/2019/09/19/noticias/1568891881_964298_1568891998_sumario_normal.jpg"
-      ]
-    },
-    {
-      "nombre": "awdawd",
-      "precio": 19999,
-      "descripcion": "awa",
-      "id": 5,
-      "imagenes": [
-        "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png"
-      ]
-    },
-    {
-      "nombre": "awda",
-      "precio": 1231,
-      "descripcion": "adawdawd",
-      "imagenes": [
-        "https://images-na.ssl-images-amazon.com/images/I/51GV6PG0J3L._SX342_.jpg"
-      ],
-      "id": 6
-    },
-    {
-      "nombre": "aaaaaaaaa",
-      "precio": 6969,
-      "descripcion": "awadeuwu",
-      "imagenes": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJP53GuvlQbmPvgLRMfyLOcbyqy4xN36yWI0AFFNIYeEUsbWzd2kyENNIa-XDTn3E2lgU&usqp=CAU"
-      ],
-      "id": 7
-    },
-    {
-      "nombre": "Mario Kart Deluxe",
-      "precio": 19000,
-      "descripcion": "El mejor juego de carreras de nintendo para disfrutar junto a tus amigos en las diferentes pistas!",
-      "imagenes": [
-        "https://i.blogs.es/acd781/mario-kart-8-deluxe/1366_2000.jpg"
-      ],
-      "id": 8
-    },
-    {
-      "nombre": "adasd",
-      "precio": 1231233,
-      "descripcion": "awdawdwd",
-      "imagenes": [
-        "https://image.api.playstation.com/cdn/EP0002/CUSA07399_00/bPXMfRCtjGgvIS0BxOWqVsn94MAMLMkE.png"
-      ],
-      "id": 11
-    }
-  ],
+  "Productos": [],
   "Intercambios": [
     {}
   ]

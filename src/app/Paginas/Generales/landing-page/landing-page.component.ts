@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Producto } from 'src/app/modulos/producto';
+import { Usuario } from 'src/app/modulos/usuario';
 import { ProductosService } from 'src/app/servicios/productos.service';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,9 +14,10 @@ export class LandingPageComponent implements OnInit {
 
   idusuario:string|null=null;
 
-  constructor(private router:Router, private route:ActivatedRoute, private servicio:ProductosService) {}
+  constructor(private router:Router, private route:ActivatedRoute, private servicio:ProductosService, private servusuarios:UsuariosService) {}
 
   productos:Producto[]=[];
+  usuarios:Usuario[]=[];
   listaimagenes:string[]=[];
   
 
@@ -25,22 +28,18 @@ export class LandingPageComponent implements OnInit {
 
   llenarProductos()
   {
-    var element:string[] | null = null;
-    this.servicio.obtenerProductos().subscribe(listaproductos=>{
-      this.productos=listaproductos;
+    this.servusuarios.obtenerUsuarios().subscribe(listausuarios=>{
+      this.usuarios=listausuarios;
+      console.log(this.usuarios);
+      for (let index = 0; index < this.usuarios.length; index++) {
+        for (let index2 = 0; index2 < this.usuarios[index].productos.length; index2++) {
+          let element = this.usuarios[index].productos[index2];
+          this.productos.push(element);
+          console.log(element);
+        }
+      }
     });
-    for (let i = 0; i< this.productos.length; i++) {
-      element = this.productos[i].imagenes;
-      if(element.length === 0)
-      {
-        this.listaimagenes.push("https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg");
-      }
-      else
-      {
-        this.listaimagenes.push(element[0]);
-      }
-      
-    }
+    
     console.log(this.listaimagenes);
   }
   /** navegar(hola:number)

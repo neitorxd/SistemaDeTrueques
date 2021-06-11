@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../modulos/usuario';
+import { Producto } from '../modulos/producto';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class UsuariosService {
   {
     return this.http.get<Usuario>("http://localhost:3000/usuarios/" + id);
   }
+
   eliminarUsuario(id:number)
   {
     return this.http.delete("http://localhost:3000/usuarios/" + id);

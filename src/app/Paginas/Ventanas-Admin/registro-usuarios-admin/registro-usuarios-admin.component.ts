@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Producto } from 'src/app/modulos/producto';
 import { Usuario } from 'src/app/modulos/usuario';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
@@ -17,6 +18,7 @@ export class RegistroUsuariosAdminComponent implements OnInit {
   usuario:string="";
   contrasena:string="";
   esadmin:boolean=false;
+  productos:Producto[]=[];
 
   constructor(private servicio:UsuariosService,private router:Router) { }
 
@@ -32,7 +34,8 @@ export class RegistroUsuariosAdminComponent implements OnInit {
       ciudad:this.ciudad,
       usuario:this.usuario,
       contrasena:this.contrasena,
-      esadmin:this.esadmin
+      esadmin:this.esadmin,
+      productos:this.productos
     }
     this.servicio.crearUsuario(usuarioactual).subscribe();
     alert("Usuario Creado");

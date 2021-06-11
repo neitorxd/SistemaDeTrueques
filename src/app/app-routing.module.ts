@@ -16,7 +16,7 @@ import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearp
 const routes: Routes = [
   {path: '',component: LoginComponent},
   {path: 'login',component: LoginComponent},
-  {path: 'usuario',component: UsuarioComponent},
+  {path: 'usuario/:idusuario',component: UsuarioComponent},
   {path: 'admin',component: AdminComponent},
   {path: 'header',component: HeaderComponent},
   {path: 'footer',component: FooterComponent},
