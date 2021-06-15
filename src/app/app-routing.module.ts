@@ -11,20 +11,21 @@ import { RegistroUsuariosAdminComponent } from './Paginas/Ventanas-Admin/registr
 import { LandingPageComponent } from './Paginas/Generales/landing-page/landing-page.component';
 import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos/ventana-productos.component';
 import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearproducto.component';
+import { AutenticacionGuard } from './guards/autenticacion.guard';
 
 
 const routes: Routes = [
   {path: '',component: LoginComponent},
   {path: 'login',component: LoginComponent},
-  {path: 'usuario/:idusuario',component: UsuarioComponent},
-  {path: 'admin',component: AdminComponent},
-  {path: 'header',component: HeaderComponent},
-  {path: 'footer',component: FooterComponent},
-  {path: 'perfilusuario/:idusuario',component:PerfilUsuarioComponent},
-  {path: 'registrousuariosadmin',component: RegistroUsuariosAdminComponent},
-  {path: 'landingpage/:idusuario',component: LandingPageComponent},
-  {path: 'ventanaproductos/:idusuario' ,component: VentanaProductosComponent},
-  {path: 'crearproducto/:idusuario', component:CrearproductoComponent }
+  {path: 'usuario/:idusuario', canActivate:[AutenticacionGuard],component: UsuarioComponent},
+  {path: 'admin', canActivate:[AutenticacionGuard],component: AdminComponent},
+  {path: 'header', canActivate:[AutenticacionGuard],component: HeaderComponent},
+  {path: 'footer', canActivate:[AutenticacionGuard],component: FooterComponent},
+  {path: 'perfilusuario/:idusuario',canActivate:[AutenticacionGuard],component:PerfilUsuarioComponent},
+  {path: 'registrousuariosadmin',canActivate:[AutenticacionGuard],component: RegistroUsuariosAdminComponent},
+  {path: 'landingpage/:idusuario',canActivate:[AutenticacionGuard],component: LandingPageComponent},
+  {path: 'ventanaproductos/:idusuario' ,canActivate:[AutenticacionGuard],component: VentanaProductosComponent},
+  {path: 'crearproducto/:idusuario',canActivate:[AutenticacionGuard], component:CrearproductoComponent }
 
 ];
 

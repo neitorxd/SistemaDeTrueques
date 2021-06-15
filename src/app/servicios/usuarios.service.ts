@@ -12,25 +12,29 @@ export class UsuariosService {
 
   obtenerUsuarios()
   {
-    return this.http.get<Usuario[]>("http://localhost:3000/usuarios");
+    return this.http.get<Usuario[]>("http://localhost:4100/usuarios");
   }
   obtenerUsuarioPorId(id:number)
   {
-    return this.http.get<Usuario>("http://localhost:3000/usuarios/" + id);
+    return this.http.get<Usuario>("http://localhost:4100/usuarios/" + id);
   }
 
   eliminarUsuario(id:number)
   {
-    return this.http.delete("http://localhost:3000/usuarios/" + id);
+    return this.http.delete("http://localhost:4100/usuarios/" + id);
   }
 
   crearUsuario(usuario:Usuario)
   {
-    return this.http.post<Usuario>("http://localhost:3000/usuarios/",usuario);
+    return this.http.post<Usuario>("http://localhost:4100/usuarios/",usuario);
   }
 
   editarUsuario(usuario:Usuario)
   {
-    return this.http.put("http://localhost:3000/usuarios/" +usuario.id, usuario);
+    return this.http.put("http://localhost:4100/usuarios/" +usuario.id, usuario);
+  }
+  login(correo:string,password:string)
+  {
+    return this.http.post<any>("http://localhost:4100/login",{correo:correo,password:password});
   }
 }

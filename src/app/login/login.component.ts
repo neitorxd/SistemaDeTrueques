@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   usuario:Usuario|null=null;
   listausuarios:Usuario[]=[];
   idSeleccionada:any=0;
+  error:boolean=false;
+  esadmin:boolean = false;
 
   constructor(private servicios:UsuariosService,private router:Router) {
     $("#login-button").click(function(event){
@@ -26,11 +28,37 @@ export class LoginComponent implements OnInit {
  });
   }
   
+  login()
+  {
+    this.servicios.login(this.user,this.password).subscribe(response=>{
+      if(response)
+      {
+        this.error = false;
+        let token = response['token'];
+        localStorage.setItem("token",token);
+        this.idSeleccionada = response['id'];
+        this.esadmin = response['esadmin'];
+        if (this.esadmin == true) {
+          this.router.navigate(['admin'])
+        }
+        else
+        {
+          this.router.navigate(['landingpage/'+this.idSeleccionada]);
+        }
+      }
+      else
+      {
+        console.log("no entre");
+        this.error=true;
+      }
+    });
+  }
+
+
   llenarUsuarios()
   {
     this.servicios.obtenerUsuarios().subscribe(lista=>{
       this.listausuarios=lista;
-      console.log(lista);
     });
   }
 
