@@ -11,24 +11,24 @@ export class ProductosService {
 
   obtenerProductos()
   {
-    return this.http.get<Producto[]>("http://localhost:3000/productos");
+    return this.http.get<Producto[]>("http://localhost:4100/productos");
   }
   obtenerProductoPorId(id:number)
   {
-    return this.http.get<Producto>("http://localhost:3000/productos/" + id);
+    return this.http.get<Producto>("http://localhost:4100/productos/" + id);
   }
   eliminarProducto(id:number)
   {
-    return this.http.delete("http://localhost:3000/productos/" + id);
+    return this.http.delete("http://localhost:4100/productos/" + id);
   }
 
   crearProducto(producto:Producto)
   {
-    return this.http.post<Producto>("http://localhost:3000/productos/",producto);
+    return this.http.post<Producto>("http://localhost:4100/productos/",producto);
   }
 
   editarProducto(producto:Producto)
   {
-    return this.http.put("http://localhost:3000/productos/" +producto.id, producto);
+    return this.http.put("http://localhost:4100/productos/" +producto.id, producto);
   }
 }

@@ -11,23 +11,23 @@ export class IntercambiosService {
 
   obtenerIntercambio()
   {
-    return this.http.get<Intercambio[]>("http://localhost:3000/usuarios");
+    return this.http.get<Intercambio[]>("http://localhost:4100/usuarios");
   }
   obtenerIntercambioPorId(id:number)
   {
-    return this.http.get<Intercambio>("http://localhost:3000/usuarios/" + id);
+    return this.http.get<Intercambio>("http://localhost:4100/usuarios/" + id);
   }
   eliminarIntercambio(id:number)
   {
-    return this.http.delete("http://localhost:3000/usuarios/" + id);
+    return this.http.delete("http://localhost:4100/usuarios/" + id);
   }
   crearIntercambio(intercambio:Intercambio)
   {
-    return this.http.post<Intercambio>("http://localhost:3000/usuarios/",intercambio);
+    return this.http.post<Intercambio>("http://localhost:4100/usuarios/",intercambio);
   }
   editarIntercambio(intercambio:Intercambio)
   {
-    return this.http.put("http://localhost:3000/usuarios/" +intercambio.id, intercambio);
+    return this.http.put("http://localhost:4100/usuarios/" +intercambio.id, intercambio);
   }
 
 }
