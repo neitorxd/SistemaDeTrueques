@@ -25,7 +25,6 @@ export class CrearproductoComponent implements OnInit {
   ngOnInit(): void {
     this.idusuario=this.route.snapshot.paramMap.get('idusuario');
     this.numeroid = Number(this.idusuario);
-    
   }
   usuarios = this.serviciousuario.obtenerUsuarios();
   urls = new Array<string>();

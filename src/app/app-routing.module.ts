@@ -12,6 +12,8 @@ import { LandingPageComponent } from './Paginas/Generales/landing-page/landing-p
 import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos/ventana-productos.component';
 import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearproducto.component';
 import { AutenticacionGuard } from './guards/autenticacion.guard';
+import { IntercambioComponent } from './Paginas/Ventanas-Usuario/intercambio/intercambio.component';
+import { PreviaIntercambioComponent } from './Paginas/Generales/previa-intercambio/previa-intercambio.component';
 
 
 const routes: Routes = [
@@ -22,11 +24,12 @@ const routes: Routes = [
   {path: 'header', canActivate:[AutenticacionGuard],component: HeaderComponent},
   {path: 'footer', canActivate:[AutenticacionGuard],component: FooterComponent},
   {path: 'perfilusuario/:idusuario',canActivate:[AutenticacionGuard],component:PerfilUsuarioComponent},
-  {path: 'registrousuariosadmin',canActivate:[AutenticacionGuard],component: RegistroUsuariosAdminComponent},
+  {path: 'registrousuariosadmin',canActivate:[AutenticacionGuard],component:RegistroUsuariosAdminComponent},
   {path: 'landingpage/:idusuario',canActivate:[AutenticacionGuard],component: LandingPageComponent},
   {path: 'ventanaproductos/:idusuario' ,canActivate:[AutenticacionGuard],component: VentanaProductosComponent},
-  {path: 'crearproducto/:idusuario',canActivate:[AutenticacionGuard], component:CrearproductoComponent }
-
+  {path: 'crearproducto/:idusuario',canActivate:[AutenticacionGuard], component:CrearproductoComponent },
+  {path: 'intercambio/:idusuario',canActivate:[AutenticacionGuard],component:IntercambioComponent},
+  {path: 'previaintercambio/:idusuario',canActivate:[AutenticacionGuard],component:PreviaIntercambioComponent}
 ];
 
 @NgModule({

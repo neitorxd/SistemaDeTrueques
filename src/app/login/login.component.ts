@@ -78,7 +78,7 @@ export class LoginComponent implements OnInit {
         {
           if(usuarioSeleccionado.esadmin === true)
           {
-            this.router.navigate(['admin']);
+            this.router.navigate(['registrousuariosadmin']);
           }
           else
           {
@@ -98,7 +98,8 @@ export class LoginComponent implements OnInit {
   }
   crearcuenta()
   {
-    this.router.navigate(['registrousuariosadmin'])
+    console.log("Entre");
+    this.router.navigate(['registrousuariosadmin']);
   }
 
   ngOnInit(): void {

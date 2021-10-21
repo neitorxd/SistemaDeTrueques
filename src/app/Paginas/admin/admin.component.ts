@@ -17,7 +17,8 @@ export class AdminComponent implements OnInit {
   apellidoeditado:string="";
   ciudadeditada:string="";
   paiseditado:string="";
-  
+  contraseniaeditada:string="";
+  nombrescompletos:string[] =[];
 
   constructor(private service:UsuariosService) { }
 
@@ -31,6 +32,10 @@ export class AdminComponent implements OnInit {
       this.usuarios=servicio;
       console.log(this.usuarios);
     });
+    for (let index = 0; index < this.usuarios.length; index++) {
+      const element = this.usuarios[index];
+      this.nombrescompletos.push(this.usuarios[index].nombre + " "+ this.usuarios[index].apellido);
+    }
   }
 
 

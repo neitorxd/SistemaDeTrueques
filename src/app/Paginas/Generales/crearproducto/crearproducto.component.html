@@ -4,19 +4,26 @@
         <div class="mb-3">
             <div class="row" style="margin-bottom: 5px;">
                 <div class="col-3">
-                    <label for="nombreProducto" class="form-label">Nombre:</label>
+                    <label for="nombreProducto" class="form-label">Nombre Completo:</label>
                     <input type="text" class="form-control" id="nombreProducto" placeholder="Ingrese Nombre Del Producto" [(ngModel)]="nombreProducto">
                 </div>
-                <div class="col-2">
-                    <label for="nombreProducto" class="form-label">Precio:</label>
+                <div class="col-3">
+                    <label for="nombreProducto" class="form-label">Precio Referencia:</label>
                     <input type="number" class="form-control" id="precioPreoducto" [(ngModel)]="precioProducto">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="nombreProducto" class="form-label">Link Imagen:</label>
                     <input type="text" class="form-control" id="imagenesProducto" placeholder="Ingrese URL's separados por coma" [(ngModel)]="linkImagen">
                 </div>
+                <div class="col-3">
+                    <label for="nombreProducto" class="form-label">Seleccionar Archivo:</label>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>
+                </div>
                 <div class="d-grid gap-2 col-3 mx-auto">
-                    <button class="btn btn-primary" type="button" style="margin-top: 3%; font-weight: bold; border: solid 3px black;" (click)="llenarImagenes()">Agregar Imagenes</button>
+                    <!--<button class="btn btn-primary" type="button" style="margin-top: 3%; font-weight: bold; border: solid 3px black;" (click)="llenarImagenes()">Agregar Imagenes</button>-->
+                    
                 </div>
                 <!-- <div class="col-4">
                     <label for="formFileMultiple" class="form-label">Seleccionar Imagenes:</label>

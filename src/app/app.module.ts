@@ -15,6 +15,8 @@ import { VentanaProductosComponent } from './Paginas/Generales/ventana-productos
 import { FormsModule } from '@angular/forms';
 import { CrearproductoComponent } from './Paginas/Generales/crearproducto/crearproducto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IntercambioComponent } from './Paginas/Ventanas-Usuario/intercambio/intercambio.component';
+import { PreviaIntercambioComponent } from './Paginas/Generales/previa-intercambio/previa-intercambio.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     RegistroUsuariosAdminComponent,
     LandingPageComponent,
     VentanaProductosComponent,
-    CrearproductoComponent
+    CrearproductoComponent,
+    IntercambioComponent,
+    PreviaIntercambioComponent
   ],
   imports: [
     BrowserModule,
